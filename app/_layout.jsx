@@ -1,8 +1,7 @@
-import { StyleSheet, Text, View } from 'react-native';
-import React, { useEffect } from 'react';
-import { Stack } from 'expo-router';
 import { useFonts } from 'expo-font';
+import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
+import React, { useEffect } from 'react';
 
 // Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync();
