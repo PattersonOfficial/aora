@@ -23,6 +23,8 @@ const SignUp = () => {
       setisSubmitting(true);
       const result = await createUser(form.email, form.password, form.username);
       Alert.alert('Success', 'Account created successfully');
+
+      // set user data to state ...
       router.replace('/home');
     } catch (error) {
       console.log({ error });
