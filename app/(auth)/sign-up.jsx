@@ -13,16 +13,15 @@ const SignUp = () => {
     email: '',
     password: '',
   });
-  const [isSubmitting, setisSubmitting] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const submit = async () => {
     if (!form.username || !form.email || !form.password) {
       Alert.alert('Error', 'Please fill all fields');
     }
     try {
-      setisSubmitting(true);
+      setIsSubmitting(true);
       const result = await createUser(form.email, form.password, form.username);
-      Alert.alert('Success', 'Account created successfully');
 
       // set user data to state ...
       router.replace('/home');
@@ -30,7 +29,7 @@ const SignUp = () => {
       console.log({ error });
       Alert.alert('Error', error?.message);
     } finally {
-      setisSubmitting(false);
+      setIsSubmitting(false);
     }
   };
 
