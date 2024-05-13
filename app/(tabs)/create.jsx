@@ -65,7 +65,6 @@ const Create = () => {
       Alert.alert('Success', 'Post uploaded successfully');
       router.push('/home');
     } catch (error) {
-      console.log({ submitError: error });
       Alert.alert('Error', error.message);
     } finally {
       setForm(initValues);
